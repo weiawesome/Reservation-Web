@@ -1,12 +1,174 @@
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-button:no-button {
+}
+::-webkit-scrollbar-track-piece {
+  background-color: darkgray;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: rgba(255,255,255);
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: transparent;
+}
 .App {
   text-align: center;
+  background-color: #282c34;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+.App-div{
+  position: relative;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  background-color: #61dafb;
+  border-radius: 5px;
+  flex-direction: column;
+  margin-bottom: 5%;
+}
+.App-ul{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 50%;
+  border-radius: 5px;
+  border-width: 0;
+  box-shadow: 2px 2px 2px 2px;
+  background-color: #282c34;
+  flex-direction: column;
+}
+.App-div-shop{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 50%;
+  border-radius: 5px;
+  border-width: 0;
+  box-shadow: 2px 2px 2px 2px;
+  background-color: #282c34;
+}
+.App-Text{
+  color: white;
+}
+.App-btns{
+  display: flex;
+  justify-content: center;
+  flex:1;
+  text-align: center;
+  margin: 2%;
+  font-size: 10%;
+}
+.App-Title{
+  position: relative;
+  margin-top: 10%;
+  color: white;
+  letter-spacing: 2px;
+  width: 50%;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  text-align: center;
+  text-justify: distribute-center-last;
+}
+.App-get{
+  text-decoration: underline;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -o-user-select:none;
+  user-select:none;
+  margin-top: 0%;
+}
+.App-get:active{
+  opacity: 0.4;
+}
+.App-submit-btn{
+  width: 50%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  border-radius: 20px;
+  margin-bottom: 3%;
+}
+.App-submit-btn:active{
+  opacity: 0.3;
+}
+.App-plus{
+  margin-left: 2%;
+  aspect-ratio: 1;
+  border-radius: 10px;
+}
+.App-input{
+  align-content: center;
+  text-align: center;
+  font-weight: bold;
+}
+.App-div-div{
+  width: 100%;
+}
+.App-minus{
+  aspect-ratio: 1;
+  border-radius: 10px;
+  margin-left: 2%;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .App-div {
+    animation: div-open 0.5s;
+  }
+  .App-div-shop {
+    animation: div-open 0.5s;
+  }
+  .App-ul{
+    animation: ul-open 0.5s;
+  }
+}
+@keyframes ul-open{
+  0%{
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  70%{
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+  100%{
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes div-open{
+  0%{
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  70%{
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+  100%{
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
-
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
